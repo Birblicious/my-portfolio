@@ -1,0 +1,27 @@
+.landingpage {
+    background-image: url("./resources/Brugge.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.landingtext {
+    padding-top: 50vh;
+    color: white;
+    font-size: 4.5rem;
+    font-weight: 700;
+    letter-spacing: .3rem;
+    text-shadow: .1rem .1rem .8rem white;
+}
+
+.delayed-8 {
+    -webkit-animation-delay: .8s;
+    animation-delay: .8s;
+}
+
+.delayed-6 {
+    -webkit-animation-delay: .6s;
+    animation-delay: .6s;
+}

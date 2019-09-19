@@ -1,6 +1,20 @@
 import React, { Component } from "react";
 import "./landing.css";
 
+//font-awesome
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faCode,
+  faCodeBranch,
+  faTree,
+  faArchway,
+  faMugHot
+} from "@fortawesome/free-solid-svg-icons";
+library.add(fab);
+
 class Landing extends Component {
   render() {
     return (
@@ -16,7 +30,10 @@ class Landing extends Component {
               <h1>Software Engineer</h1>
             </div>
             <div className="col-12 animated bounceInUp delay-1s">
-              <a className="btn btn-outline-light btn-lg">Welcome</a>
+              <a className="btn btn-outline-light btn-lg">
+                Welcome
+                <FontAwesomeIcon className="mx-3" icon={faMugHot} />
+              </a>
             </div>
           </div>
         </div>

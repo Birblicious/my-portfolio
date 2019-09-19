@@ -6,7 +6,9 @@ class Landing extends Component {
     return (
       <div className="landingpage">
         <div className="container text-center">
+          <div className="row"></div>
           <div className="row landingtext">
+            <div className="col-12 animated fadeInDown delay-1s landingpage-profile mx-auto my-5"></div>
             <div className="col-12 animated bounceInUp delayed-6">
               <h1>Arda Burak EKMEKÇİ</h1>
             </div>
@@ -14,7 +16,7 @@ class Landing extends Component {
               <h1>Software Engineer</h1>
             </div>
             <div className="col-12 animated bounceInUp delay-1s">
-              <h1>More Info ☺</h1>
+              <a className="btn btn-outline-light btn-lg">Welcome</a>
             </div>
           </div>
         </div>

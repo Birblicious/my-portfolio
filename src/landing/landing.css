@@ -1,5 +1,6 @@
+/* Landing page background */
 .landingpage {
-    background-image: url("./resources/Brugge.jpg");
+    background-image: url("./resources/Scot-highland.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -7,15 +8,44 @@
     width: 100%;
 }
 
+/* Landing page profile picture */
+
+.landingpage-profile {
+    height: 200px;
+    width: 200px;
+    max-width: 200px;
+    background-image: url("./resources/profile5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Landing page text */
+
 .landingtext {
-    padding-top: 50vh;
+    padding-top: 35vh;
     color: white;
     font-size: 4.5rem;
     font-weight: 700;
     letter-spacing: .3rem;
-    text-shadow: .1rem .1rem .8rem white;
+    text-shadow: .1rem .2rem .3rem black;
 }
 
+/* Landing page button */
+.btn-lg {
+
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    text-align: center;
+    border-width: thin;
+    border-radius: 0;
+    padding: .2rem 1.5rem;
+    text-shadow: .1rem .1rem 4rem greenyellow;
+}
+
+/* Landing page animations */
 .delayed-8 {
     -webkit-animation-delay: .8s;
     animation-delay: .8s;

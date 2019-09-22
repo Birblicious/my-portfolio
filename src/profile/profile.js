@@ -1,13 +1,60 @@
 import React, { Component } from "react";
 import "./profile.css";
+import { Waypoint } from "react-waypoint";
 
 class Profile extends Component {
   render() {
+    const addAnimation = () => {
+      var element = document.getElementById("profile-heading");
+      element.classList.add("animated");
+      element.classList.add("fadeIn");
+
+      element = document.getElementById("picture-div");
+      element.classList.add("animated");
+      element.classList.add("fadeInLeft");
+
+      element = document.getElementById("picture-div");
+      element.classList.add("animated");
+      element.classList.add("fadeInLeft");
+
+      element = document.getElementById("details-animation");
+      element.classList.add("animated");
+      element.classList.add("fadeInRight");
+    };
+
+    const removeAnimation = () => {
+      var element = document.getElementById("profile-heading");
+      element.classList.remove("animated");
+      element.classList.remove("fadeIn");
+
+      element = document.getElementById("picture-div");
+      element.classList.remove("animated");
+      element.classList.remove("fadeInLeft");
+
+      element = document.getElementById("picture-div");
+      element.classList.remove("animated");
+      element.classList.remove("fadeInLeft");
+
+      element = document.getElementById("details-animation");
+      element.classList.remove("animated");
+      element.classList.remove("fadeInRight");
+    };
+
     return (
-      <div id="profile">
+      <div id="profile" className="offset">
+        <Waypoint
+          scrollableAncestor={window}
+          onEnter={() => {
+            addAnimation();
+          }}
+          bottomOffset={"10%"}
+        ></Waypoint>
         <div className="container">
           <div className="row">
-            <div className="col-12 my-5 text-center  animated fadeIn delayed-6">
+            <div
+              id="profile-heading"
+              className="col-12 my-5 text-center delayed-6"
+            >
               <p className="profile-entry">Profile</p>
               <p className="profile-details">I am a Fullstack Developer :)</p>
               <hr className="line-options"></hr>
@@ -15,21 +62,27 @@ class Profile extends Component {
           </div>
           <div className="profile-space">
             <div className="row">
-              <div className="col-sm-12 col-md-8 col-lg-6 my-5 mx-auto d-flex animated fadeInLeft delayed-8">
+              <div
+                id="picture-div"
+                className="col-sm-12 test col-md-12 col-lg-6 my-5 mx-auto d-flex delayed-8"
+              >
                 <div className="row mx-auto">
-                  <div className="col-12">
+                  <div className="col-12 picture-container">
                     <div className="profile-picture"></div>
                   </div>
                 </div>
               </div>
 
-              <div className="col-sm-12 col-md-4 col-lg-6 my-5 d-flex text-lg-right animated fadeInRight delayed-8">
+              <div
+                id="details-animation"
+                className="col-sm-12 col-md-12 col-lg-6 my-5 d-flex text-lg-right delayed-8"
+              >
                 <div className="row">
                   <div className="col-12 text-center ">
                     <h1 className="about-me-text">About me</h1>
                   </div>
-                  <div className="col-12 info-text text-sm-center text-lg-right ">
-                    <p>
+                  <div className="col-12  text-justify text-lg-right ">
+                    <p className="info-text">
                       Hello, I am a 28 old developer with back-end and front-end
                       experience. I have experience on EDA and SOA using .Net
                       and Springboot frameworks. I like to implement solutions

@@ -18,10 +18,10 @@ class Landing extends Component {
           <div className="row landingtext">
             <div className="col-12 animated fadeInDown delay-1s landingpage-profile mx-auto my-5"></div>
             <div className="col-12 animated bounceInUp delayed-6">
-              <h1>Arda Burak EKMEKÇİ</h1>
+              <p>Arda Burak EKMEKÇİ</p>
             </div>
             <div className="col-12 animated bounceInUp delayed-8">
-              <h1>Software Engineer</h1>
+              <p>Software Engineer</p>
             </div>
             <div className="col-12 animated bounceInUp delay-1s">
               <a className="btn btn-outline-light btn-lg" href="#profile">

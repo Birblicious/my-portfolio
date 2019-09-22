@@ -34,3 +34,15 @@
     background: rgba(0, 0, 0, 0.7) !important;
     transition: background-color 1s ease 0s;
 }
+
+/*============= WAYPOINTS =============*/
+
+.os-animation {
+    opacity: 0;
+    margin: 0 !important;
+    max-width: 100%;
+}
+
+.os-animation.animated {
+    opacity: 1;
+}

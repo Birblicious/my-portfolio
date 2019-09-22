@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nothing+You+Could+Do&display=swap");
+@import url("https://fonts.googleapis.com/css?family=PT+Mono&display=swap");
+
+
+
+
+.profile-picture {
+    height: 400px;
+    width: 400px;
+    max-width: 400px;
+    min-width: 300px;
+    background-image: url("./resources/profile8.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 5vh;
+}
+
+.profile-entry {
+    font-size: 4rem;
+    color: #2fadfe;
+    font-family: "Nothing You Could Do";
+    letter-spacing: .4rem;
+
+}
+
+.profile-details {
+    font-size: 2rem;
+    color: red;
+    font-family: "Nothing You Could Do";
+    letter-spacing: .4rem;
+
+}
+
+.line-options {
+    width: 75%;
+    border-width: 2px;
+}
+
+/* Landing page animations */
+.delayed-8 {
+    -webkit-animation-delay: .8s;
+    animation-delay: .8s;
+}
+
+.delayed-6 {
+    -webkit-animation-delay: .6s;
+    animation-delay: .6s;
+}
+
+.about-me-text {
+    font-family: "Nothing You Could Do";
+    font-weight: bold;
+
+}
+
+.info-text {
+    font-family: "Roboto";
+    letter-spacing: .1rem;
+    font-size: 1.5rem;
+}
+
+.profile-space {
+    margin-bottom: 8.1vh;
+}

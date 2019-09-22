@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Waypoint } from "react-waypoint";
 
 //Bootstrap CSS JS & JQ
 import "bootstrap/dist/css/bootstrap.min.css";

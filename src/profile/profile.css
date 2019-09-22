@@ -6,10 +6,10 @@
 
 
 .profile-picture {
-    height: 400px;
-    width: 400px;
-    max-width: 400px;
-    min-width: 300px;
+    height: 40vh;
+    width: 40vh;
+    max-width: 40vh;
+    min-width: 40vh;
     background-image: url("./resources/profile8.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,6 +20,7 @@
 }
 
 .profile-entry {
+    margin-top: 10vh;
     font-size: 4rem;
     color: #2fadfe;
     font-family: "Nothing You Could Do";
@@ -28,6 +29,7 @@
 }
 
 .profile-details {
+
     font-size: 2rem;
     color: red;
     font-family: "Nothing You Could Do";
@@ -60,9 +62,9 @@
 .info-text {
     font-family: "Roboto";
     letter-spacing: .1rem;
-    font-size: 1.5rem;
+    font-size: 2.5vh;
 }
 
 .profile-space {
-    margin-bottom: 8.1vh;
+    margin-bottom: 5vh;
 }

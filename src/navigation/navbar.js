@@ -15,6 +15,7 @@ class Navbar extends Component {
                 <img
                   className="brand"
                   src={require("./resources/person.png")}
+                  alt=""
                 />
               </a>
               <button
@@ -35,13 +36,13 @@ class Navbar extends Component {
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#abstract">
-                      ABSTRACT
+                    <a className="nav-link" href="#profile">
+                      PROFILE
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#history">
-                      HISTORY
+                    <a className="nav-link" href="#experience">
+                      EXPERIENCE
                     </a>
                   </li>
                   <li className="nav-item">

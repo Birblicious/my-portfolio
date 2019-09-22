@@ -24,7 +24,7 @@ class Landing extends Component {
               <h1>Software Engineer</h1>
             </div>
             <div className="col-12 animated bounceInUp delay-1s">
-              <a className="btn btn-outline-light btn-lg" href="#home">
+              <a className="btn btn-outline-light btn-lg" href="#profile">
                 Welcome
                 <FontAwesomeIcon className="mx-3" icon={faMugHot} />
               </a>

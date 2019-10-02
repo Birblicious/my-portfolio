@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Landing from "../landing/landing";
 import Navbar from "../navigation/navbar";
 import Profile from "../profile/profile";
+import Experiences from "../experience/experiences";
 
 class App extends Component {
   render() {
@@ -17,6 +18,9 @@ class App extends Component {
         </div>
         <div>
           <Profile />
+        </div>
+        <div>
+          <Experiences />
         </div>
       </div>
     );

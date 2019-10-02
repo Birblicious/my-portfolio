@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Nothing+You+Could+Do&display=swap");
 @import url("https://fonts.googleapis.com/css?family=PT+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Dosis&display=swap");
 
 
 
@@ -20,19 +21,19 @@
 }
 
 .profile-entry {
-    margin-top: 10vh;
-    font-size: 4rem;
+    font-size: 10vh;
     color: #2fadfe;
-    font-family: "Nothing You Could Do";
+    font-family: "Dosis";
     letter-spacing: .4rem;
 
 }
 
 .profile-details {
 
-    font-size: 2rem;
-    color: red;
-    font-family: "Nothing You Could Do";
+    font-size: 3vh;
+    color: greenyellow;
+    font-family: "Dosis";
+    font-weight: bold;
     letter-spacing: .4rem;
 
 }
@@ -40,6 +41,7 @@
 .line-options {
     width: 75%;
     border-width: 2px;
+    border-color: white;
 }
 
 /* Landing page animations */
@@ -54,8 +56,10 @@
 }
 
 .about-me-text {
-    font-family: "Nothing You Could Do";
+    font-family: "Dosis";
     font-weight: bold;
+    color: greenyellow;
+    /* text-shadow: .1rem .2rem .3rem gray;*/
 
 }
 
@@ -63,8 +67,13 @@
     font-family: "Roboto";
     letter-spacing: .1rem;
     font-size: 2.5vh;
+    color: white
 }
 
-.profile-space {
-    margin-bottom: 5vh;
+#profile {
+    background-image: url("./resources/isaac.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }

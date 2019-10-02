@@ -1,0 +1,34 @@
+#experience {
+    background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+}
+
+.experience-entry {
+    font-size: 10vh;
+    color: #2fadfe;
+    font-family: "Dosis";
+    letter-spacing: .4rem;
+}
+
+.experience-details {
+    font-size: 3vh;
+    color: greenyellow;
+    font-family: "Dosis";
+    font-weight: bold;
+    letter-spacing: .4rem;
+}
+
+.experience-row {
+    text-align: center;
+    color: #adff2f;
+}
+
+.experiences-list {
+    font-family: "Roboto";
+    font-size: 2vh;
+    text-align: justify;
+    color: white;
+}
+
+.experience-heading {
+    margin: auto;
+}

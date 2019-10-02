@@ -32,3 +32,11 @@
 .experience-heading {
     margin: auto;
 }
+
+a {
+    color: greenyellow;
+}
+
+a:hover {
+    color: springgreen;
+}

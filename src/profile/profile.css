@@ -66,12 +66,12 @@
 .info-text {
     font-family: "Roboto";
     letter-spacing: .1rem;
-    font-size: 2.5vh;
+    font-size: 2.4vh;
     color: white
 }
 
 #profile {
-    background-image: url("./resources/isaac-compressed.jpg");
+    background-image: url("./resources/mark.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

@@ -1,0 +1,64 @@
+.background {
+    background-image: url("./resources/isaac-compressed.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.padding-1 {
+    padding-top: 10vh;
+}
+
+.padding-2 {
+    padding-top: 5vh;
+}
+
+.padding-progressbar {
+    margin: auto;
+}
+
+.progressbar-height {
+    height: 3vh;
+}
+
+.progressbar-text {
+    font-family: "Dosis";
+    color: greenyellow;
+    font-size: 2vh;
+    margin: auto;
+}
+
+.skills-entry {
+    font-size: 10vh;
+    color: #2fadfe;
+    font-family: "Dosis";
+    letter-spacing: .4rem;
+}
+
+.skills-details {
+    font-size: 3vh;
+    color: greenyellow;
+    font-family: "Dosis";
+    font-weight: bold;
+    letter-spacing: .4rem;
+}
+
+.skills-line {
+    width: 75%;
+    border-width: 2px;
+    border-color: white;
+}
+
+.skills-line-short {
+    width: 50%;
+    border-width: 2px;
+    border-color: white;
+}
+
+.skills-headline {
+    color: #2fadfe;
+    font-weight: bold;
+    font-size: 3vh;
+    text-shadow: .1rem .1rem 4rem cyan;
+}

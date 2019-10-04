@@ -4,6 +4,7 @@ import Landing from "../landing/landing";
 import Navbar from "../navigation/navbar";
 import Profile from "../profile/profile";
 import Experiences from "../experience/experiences";
+import Skills from "../skills/skills";
 
 class App extends Component {
   render() {
@@ -21,6 +22,9 @@ class App extends Component {
         </div>
         <div>
           <Experiences />
+        </div>
+        <div>
+          <Skills />
         </div>
       </div>
     );

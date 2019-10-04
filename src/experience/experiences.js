@@ -61,7 +61,7 @@ class Experiences extends Component {
               }}
             ></Waypoint>
             <div className="col-12 experience-entry text-center">
-              <p>Experiences</p>
+              <p>Experience</p>
             </div>
             <div className="col-12 experience-details text-center">
               <p>

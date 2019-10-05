@@ -1,9 +1,60 @@
 import React, { Component } from "react";
-
+import { Waypoint } from "react-waypoint";
 import "./skills.css";
 
 class Skills extends Component {
   render() {
+    const AddProgressbarAnimation = (divID, animation) => {
+      var element = document.getElementById(divID);
+      element.classList.add("animated");
+      element.classList.add(animation);
+    };
+
+    const CreateProgressBar = props => {
+      var barRankFill = "";
+      var barClasses = "";
+
+      switch (props.barRank) {
+        case "Strong":
+          barRankFill = { width: "100%" };
+          barClasses = "progress-bar progress-bar-striped bg-info";
+          break;
+        case "Experienced":
+          barRankFill = { width: "75%" };
+          barClasses = "progress-bar progress-bar-striped bg-success";
+          break;
+        case "Familiar":
+          barRankFill = { width: "50%" };
+          barClasses = "progress-bar progress-bar-striped bg-primary";
+          break;
+        default:
+          barRankFill = { width: "25%" };
+          barClasses = "progress-bar progress-bar-striped bg-warning";
+          break;
+      }
+
+      return (
+        <React.Fragment>
+          <div className="col-sm-4 col-md-1 ">
+            <p className="text-center">{props.barTitle}</p>
+          </div>
+          <div className="col-sm-8 col-md-5">
+            <div className="progress  progressbar-height">
+              <div
+                className={barClasses}
+                role="progressbar"
+                style={barRankFill}
+                aria-valuenow="10"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                {props.barRank}
+              </div>
+            </div>
+          </div>
+        </React.Fragment>
+      );
+    };
     return (
       <div id="skills" className="background">
         <div className="container padding-1">
@@ -21,588 +72,170 @@ class Skills extends Component {
         </div>
         <hr className="skills-line"></hr>
         <div className="container-fluid  progressbar-text">
-          <div className="row">
-            <div className="col-12">
-              <p className="text-center padding-2 skills-headline">
-                BACKEND TECHNOLOGIES
-              </p>
+          <div id="backend">
+            <Waypoint
+              scrollableAncestor={window}
+              onEnter={() => {
+                AddProgressbarAnimation("backend", "slideInLeft");
+              }}
+              bottomOffset={"1%"}
+            ></Waypoint>
+            <div className="row">
+              <div className="col-12">
+                <p className="text-center padding-2 skills-headline">
+                  BACKEND TECHNOLOGIES
+                </p>
+              </div>
             </div>
+            <hr className="skills-line-short"></hr>
+            {/* PROGRESS-BAR ROW START*/}
+            <div className="row padding-1 padding-progressbar">
+              <CreateProgressBar barTitle={".Net MVC-5"} barRank={"Strong"} />
+              <CreateProgressBar
+                barTitle={".Net Core 2.2"}
+                barRank={"Strong"}
+              />
+            </div>
+            {/* PROGRESS-BAR ROW START*/}
+            <div className="row padding-progressbar">
+              <CreateProgressBar barTitle={"C#"} barRank={"Strong"} />
+              <CreateProgressBar barTitle={"J2EE"} barRank={"Experienced"} />
+            </div>
+            {/* PROGRESS-BAR ROW START*/}
+            <div className="row padding-progressbar">
+              <CreateProgressBar
+                barTitle={"Spring Boot"}
+                barRank={"Experienced"}
+              />
+              <CreateProgressBar barTitle={"Java"} barRank={"Experienced"} />
+            </div>
+            {/* PROGRESS-BAR ROW START*/}
+            <div className="row  padding-progressbar">
+              <CreateProgressBar barTitle={"XUnit"} barRank={"Experienced"} />
+              <CreateProgressBar barTitle={"PHP"} barRank={"Familiar"} />
+            </div>
+            {/* PROGRESS-BAR ROW END BACK-END */}
           </div>
-          <hr className="skills-line-short"></hr>
-          {/* PROGRESS-BAR ROW START*/}
-          <div className="row padding-1 padding-progressbar">
-            {/* PROGRESS-BAR START */}
-            <div className="col-sm-4 col-md-1 ">
-              <p className="text-center">.Net MVC-5</p>
-            </div>
-            <div className="col-sm-8 col-md-5">
-              <div className="progress  progressbar-height">
-                <div
-                  className="progress-bar progress-bar-striped bg-info"
-                  role="progressbar"
-                  style={{ width: "100%" }}
-                  aria-valuenow="10"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  Strong
-                </div>
-              </div>
-            </div>
-            {/* PROGRESS-BAR END */}
-            {/* PROGRESS-BAR START */}
-            <div className="col-xs-4 col-sm-4 col-md-1">
-              <p className="text-center">.Net Core 2.2</p>
-            </div>
-            <div className="col-xs-8 col-sm-8 col-md-5">
-              <div className="progress  progressbar-height">
-                <div
-                  className="progress-bar progress-bar-striped bg-info"
-                  role="progressbar"
-                  style={{ width: "100%" }}
-                  aria-valuenow="10"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  Strong
-                </div>
-              </div>
-            </div>
-            {/* PROGRESS-BAR END */}
-          </div>
-          {/* PROGRESS-BAR ROW END */}
-          {/* PROGRESS-BAR ROW START*/}
-          <div className="row padding-progressbar">
-            {/* PROGRESS-BAR START */}
-            <div className="col-sm-4 col-md-1 ">
-              <p className="text-center">C#</p>
-            </div>
-            <div className="col-sm-8 col-md-5">
-              <div className="progress  progressbar-height">
-                <div
-                  className="progress-bar progress-bar-striped bg-info"
-                  role="progressbar"
-                  style={{ width: "100%" }}
-                  aria-valuenow="10"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  Strong
-                </div>
-              </div>
-            </div>
-            {/* PROGRESS-BAR END */}
-            {/* PROGRESS-BAR START */}
-            <div className="col-xs-4 col-sm-4 col-md-1">
-              <p className="text-center">J2EE</p>
-            </div>
-            <div className="col-xs-8 col-sm-8 col-md-5">
-              <div className="progress  progressbar-height">
-                <div
-                  className="progress-bar progress-bar-striped bg-success"
-                  role="progressbar"
-                  style={{ width: "75%" }}
-                  aria-valuenow="10"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  Experienced
-                </div>
-              </div>
-            </div>
-            {/* PROGRESS-BAR END */}
-          </div>
-          {/* PROGRESS-BAR ROW END */}
-          {/* PROGRESS-BAR ROW START*/}
-          <div className="row padding-progressbar">
-            {/* PROGRESS-BAR START */}
-            <div className="col-sm-4 col-md-1 ">
-              <p className="text-center">Spring Boot</p>
-            </div>
-            <div className="col-sm-8 col-md-5">
-              <div className="progress  progressbar-height">
-                <div
-                  className="progress-bar progress-bar-striped bg-success"
-                  role="progressbar"
-                  style={{ width: "75%" }}
-                  aria-valuenow="10"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  Experienced
-                </div>
-              </div>
-            </div>
-            {/* PROGRESS-BAR END */}
-            {/* PROGRESS-BAR START */}
-            <div className="col-xs-4 col-sm-4 col-md-1">
-              <p className="text-center">Java</p>
-            </div>
-            <div className="col-xs-8 col-sm-8 col-md-5">
-              <div className="progress  progressbar-height">
-                <div
-                  className="progress-bar progress-bar-striped bg-success"
-                  role="progressbar"
-                  style={{ width: "75%" }}
-                  aria-valuenow="10"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  Experienced
-                </div>
-              </div>
-            </div>
-            {/* PROGRESS-BAR END */}
-          </div>
-          {/* PROGRESS-BAR ROW END */}
-          {/* PROGRESS-BAR ROW START*/}
-          <div className="row  padding-progressbar">
-            {/* PROGRESS-BAR START */}
-            <div className="col-sm-4 col-md-1 ">
-              <p className="text-center">XUnit</p>
-            </div>
-            <div className="col-sm-8 col-md-5">
-              <div className="progress  progressbar-height">
-                <div
-                  className="progress-bar progress-bar-striped bg-success"
-                  role="progressbar"
-                  style={{ width: "75%" }}
-                  aria-valuenow="10"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  Familiar
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-4 col-md-1 ">
-              <p className="text-center">PHP</p>
-            </div>
-            <div className="col-sm-8 col-md-5">
-              <div className="progress  progressbar-height">
-                <div
-                  className="progress-bar progress-bar-striped bg-primary"
-                  role="progressbar"
-                  style={{ width: "50%" }}
-                  aria-valuenow="10"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  Familiar
-                </div>
-              </div>
-            </div>
-            {/* PROGRESS-BAR END */}
-            {/* PROGRESS-BAR START */}
-            <div className="col-xs-4 col-sm-4 col-md-1"></div>
-            {/* PROGRESS-BAR END */}
-          </div>
-          {/* PROGRESS-BAR ROW END BACK-END */}
+
           {/* PROGRESS-BAR START FRONT-END*/}
-          <div className="row">
-            <div className="col-12">
-              <p className="text-center padding-2 skills-headline">
-                FRONTEND TECHNOLOGIES
-              </p>
+          <div id="frontend">
+            <Waypoint
+              scrollableAncestor={window}
+              onEnter={() => {
+                AddProgressbarAnimation("frontend", "slideInRight");
+              }}
+              bottomOffset={"1%"}
+            ></Waypoint>
+            <div className="row"></div>
+            <div className="row">
+              <div className="col-12">
+                <p className="text-center padding-2 skills-headline">
+                  FRONTEND TECHNOLOGIES
+                </p>
+              </div>
+            </div>
+            <hr className="skills-line-short"></hr>
+            {/* PROGRESS-BAR ROW START*/}
+            <div className="row padding-1 padding-progressbar">
+              <CreateProgressBar barTitle={"HTML-5"} barRank={"Strong"} />
+              <CreateProgressBar barTitle={"CSS-3"} barRank={"Strong"} />
+            </div>
+            {/* PROGRESS-BAR ROW START*/}
+            <div className="row padding-progressbar">
+              <CreateProgressBar barTitle={"Bootstrap"} barRank={"Strong"} />
+              <CreateProgressBar
+                barTitle={"React-Redux"}
+                barRank={"Experienced"}
+              />
+            </div>
+            {/* PROGRESS-BAR ROW START*/}
+            <div className="row padding-progressbar">
+              <CreateProgressBar barTitle={"JavaScript"} barRank={"Familiar"} />
+              <CreateProgressBar barTitle={"JQuery"} barRank={"Familiar"} />
             </div>
           </div>
-          <hr className="skills-line-short"></hr>
-          {/* PROGRESS-BAR ROW START*/}
-          <div className="row padding-1 padding-progressbar">
-            {/* PROGRESS-BAR START */}
-            <div className="col-sm-4 col-md-1 ">
-              <p className="text-center">HTML-5</p>
-            </div>
-            <div className="col-sm-8 col-md-5">
-              <div className="progress  progressbar-height">
-                <div
-                  className="progress-bar progress-bar-striped bg-info"
-                  role="progressbar"
-                  style={{ width: "100%" }}
-                  aria-valuenow="10"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  Strong
-                </div>
+
+          {/* PROGRESS-BAR START DATABASE*/}
+          <div id="database">
+            <Waypoint
+              scrollableAncestor={window}
+              onEnter={() => {
+                AddProgressbarAnimation("database", "slideInLeft");
+              }}
+              bottomOffset={"1%"}
+            ></Waypoint>
+            <div className="row">
+              <div className="col-12">
+                <p className="text-center padding-2 skills-headline">
+                  DATABASE TECHNOLOGIES
+                </p>
               </div>
             </div>
-            {/* PROGRESS-BAR END */}
-            {/* PROGRESS-BAR START */}
-            <div className="col-xs-4 col-sm-4 col-md-1">
-              <p className="text-center">CSS-3</p>
+            <hr className="skills-line-short"></hr>
+            {/* PROGRESS-BAR ROW START*/}
+            <div className="row padding-1 padding-progressbar">
+              <CreateProgressBar barTitle={"ORACLE DB"} barRank={"Strong"} />
+              <CreateProgressBar barTitle={"MYSQL"} barRank={"Strong"} />
             </div>
-            <div className="col-xs-8 col-sm-8 col-md-5">
-              <div className="progress  progressbar-height">
-                <div
-                  className="progress-bar progress-bar-striped bg-info"
-                  role="progressbar"
-                  style={{ width: "100%" }}
-                  aria-valuenow="10"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  Strong
-                </div>
-              </div>
-            </div>
-            {/* PROGRESS-BAR END */}
-          </div>
-          {/* PROGRESS-BAR ROW END */}
-          {/* PROGRESS-BAR ROW START*/}
-          <div className="row padding-progressbar">
-            {/* PROGRESS-BAR START */}
-            <div className="col-sm-4 col-md-1 ">
-              <p className="text-center">Bootstrap</p>
-            </div>
-            <div className="col-sm-8 col-md-5">
-              <div className="progress  progressbar-height">
-                <div
-                  className="progress-bar progress-bar-striped bg-info"
-                  role="progressbar"
-                  style={{ width: "100%" }}
-                  aria-valuenow="10"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  Strong
-                </div>
-              </div>
-            </div>
-            {/* PROGRESS-BAR END */}
-            {/* PROGRESS-BAR START */}
-            <div className="col-xs-4 col-sm-4 col-md-1">
-              <p className="text-center">React-Redux</p>
-            </div>
-            <div className="col-xs-8 col-sm-8 col-md-5">
-              <div className="progress  progressbar-height">
-                <div
-                  className="progress-bar progress-bar-striped bg-success"
-                  role="progressbar"
-                  style={{ width: "75%" }}
-                  aria-valuenow="10"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  Experienced
-                </div>
-              </div>
-            </div>
-            {/* PROGRESS-BAR END */}
-          </div>
-          {/* PROGRESS-BAR ROW END */}
-          {/* PROGRESS-BAR ROW START*/}
-          <div className="row padding-progressbar">
-            {/* PROGRESS-BAR START */}
-            <div className="col-sm-4 col-md-1 ">
-              <p className="text-center">JavaScript</p>
-            </div>
-            <div className="col-sm-8 col-md-5">
-              <div className="progress  progressbar-height">
-                <div
-                  className="progress-bar progress-bar-striped bg-primary"
-                  role="progressbar"
-                  style={{ width: "50%" }}
-                  aria-valuenow="10"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  Familiar
-                </div>
-              </div>
-            </div>
-            {/* PROGRESS-BAR END */}
-            {/* PROGRESS-BAR START */}
-            <div className="col-xs-4 col-sm-4 col-md-1">
-              <div className="col-sm-4 col-md-1 ">
-                <p className="text-center">JQuery</p>
-              </div>
-            </div>
-            <div className="col-xs-8 col-sm-8 col-md-5">
-              <div className="progress  progressbar-height">
-                <div
-                  className="progress-bar progress-bar-striped bg-primary"
-                  role="progressbar"
-                  style={{ width: "50%" }}
-                  aria-valuenow="10"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  Familiar
-                </div>
-              </div>
-            </div>
-            {/* PROGRESS-BAR END */}
-          </div>
-          {/* PROGRESS-BAR ROW END */}
-          <div className="row">
-            <div className="col-12">
-              <p className="text-center padding-2 skills-headline">
-                DATABASE TECHNOLOGIES
-              </p>
+            <div className="row padding-progressbar">
+              <CreateProgressBar barTitle={"PL/SQL"} barRank={"Strong"} />
+              <CreateProgressBar barTitle={"PostgreSQL"} barRank={"Familiar"} />
             </div>
           </div>
-          <hr className="skills-line-short"></hr>
-          {/* PROGRESS-BAR ROW START*/}
-          <div className="row padding-1 padding-progressbar">
-            {/* PROGRESS-BAR START */}
-            <div className="col-sm-4 col-md-1 ">
-              <p className="text-center">ORACLE DB</p>
-            </div>
-            <div className="col-sm-8 col-md-5">
-              <div className="progress  progressbar-height">
-                <div
-                  className="progress-bar progress-bar-striped bg-info"
-                  role="progressbar"
-                  style={{ width: "100%" }}
-                  aria-valuenow="10"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  Strong
-                </div>
+
+          {/* PROGRESS-BAR START PLATFORMS & TOOLS*/}
+          <div id="platforms">
+            <Waypoint
+              scrollableAncestor={window}
+              onEnter={() => {
+                AddProgressbarAnimation("platforms", "slideInRight");
+              }}
+              bottomOffset={"1%"}
+            ></Waypoint>
+            <div className="row">
+              <div className="col-12">
+                <p className="text-center padding-2 skills-headline">
+                  PLATFORMS & TOOLS
+                </p>
               </div>
             </div>
-            {/* PROGRESS-BAR END */}
-            {/* PROGRESS-BAR START */}
-            <div className="col-xs-4 col-sm-4 col-md-1">
-              <p className="text-center">MYSQL</p>
+            <hr className="skills-line-short"></hr>
+            {/* PROGRESS-BAR ROW START*/}
+            <div className="row padding-1 padding-progressbar">
+              <CreateProgressBar
+                barTitle={"Microsoft Azure"}
+                barRank={"Experienced"}
+              />
+              <CreateProgressBar
+                barTitle={"Apache Kafka"}
+                barRank={"Experienced"}
+              />
             </div>
-            <div className="col-xs-8 col-sm-8 col-md-5">
-              <div className="progress  progressbar-height">
-                <div
-                  className="progress-bar progress-bar-striped bg-info"
-                  role="progressbar"
-                  style={{ width: "100%" }}
-                  aria-valuenow="10"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  Strong
-                </div>
-              </div>
+            {/* PROGRESS-BAR ROW START*/}
+            <div className="row padding-progressbar">
+              <CreateProgressBar
+                barTitle={"Informatica"}
+                barRank={"Experienced"}
+              />
+              <CreateProgressBar
+                barTitle={"Elastic Search"}
+                barRank={"Experienced"}
+              />
             </div>
-            {/* PROGRESS-BAR END */}
-          </div>
-          {/* PROGRESS-BAR ROW END */}
-          {/* PROGRESS-BAR ROW START*/}
-          <div className="row padding-progressbar">
-            {/* PROGRESS-BAR START */}
-            <div className="col-sm-4 col-md-1 ">
-              <p className="text-center">PL/SQL</p>
+            {/* PROGRESS-BAR ROW START*/}
+            <div className="row padding-progressbar">
+              <CreateProgressBar barTitle={"Kibana"} barRank={"Experienced"} />
+              <CreateProgressBar barTitle={"Logstash"} barRank={"Familiar"} />
             </div>
-            <div className="col-sm-8 col-md-5">
-              <div className="progress  progressbar-height">
-                <div
-                  className="progress-bar progress-bar-striped bg-info"
-                  role="progressbar"
-                  style={{ width: "100%" }}
-                  aria-valuenow="10"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  Strong
-                </div>
-              </div>
-            </div>
-            {/* PROGRESS-BAR END */}
-            {/* PROGRESS-BAR START */}
-            <div className="col-xs-4 col-sm-4 col-md-1">
-              <p className="text-center">PostgreSQL</p>
-            </div>
-            <div className="col-xs-8 col-sm-8 col-md-5">
-              <div className="progress  progressbar-height">
-                <div
-                  className="progress-bar progress-bar-striped bg-primary"
-                  role="progressbar"
-                  style={{ width: "50%" }}
-                  aria-valuenow="10"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  Familiar
-                </div>
-              </div>
-            </div>
-            {/* PROGRESS-BAR END */}
-          </div>
-          {/* PROGRESS-BAR ROW END */}
-          <div className="row">
-            <div className="col-12">
-              <p className="text-center padding-2 skills-headline">
-                PLATFORMS & TOOLS
-              </p>
+            {/* PROGRESS-BAR ROW START*/}
+            <div className="row padding-progressbar">
+              <CreateProgressBar
+                barTitle={"Apache Spark"}
+                barRank={"Familiar"}
+              />
+              <CreateProgressBar barTitle={"Docker"} barRank={"Familiar"} />
             </div>
           </div>
-          <hr className="skills-line-short"></hr>
-          {/* PROGRESS-BAR ROW START*/}
-          <div className="row padding-1 padding-progressbar">
-            {/* PROGRESS-BAR START */}
-            <div className="col-sm-4 col-md-1 ">
-              <p className="text-center">Microsoft Azure</p>
-            </div>
-            <div className="col-sm-8 col-md-5">
-              <div className="progress  progressbar-height">
-                <div
-                  className="progress-bar progress-bar-striped bg-success"
-                  role="progressbar"
-                  style={{ width: "75%" }}
-                  aria-valuenow="10"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  Experienced
-                </div>
-              </div>
-            </div>
-            {/* PROGRESS-BAR END */}
-            {/* PROGRESS-BAR START */}
-            <div className="col-xs-4 col-sm-4 col-md-1">
-              <p className="text-center">Apache Kafka</p>
-            </div>
-            <div className="col-xs-8 col-sm-8 col-md-5">
-              <div className="progress  progressbar-height">
-                <div
-                  className="progress-bar progress-bar-striped bg-success"
-                  role="progressbar"
-                  style={{ width: "75%" }}
-                  aria-valuenow="10"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  Experienced
-                </div>
-              </div>
-            </div>
-            {/* PROGRESS-BAR END */}
-          </div>
-          {/* PROGRESS-BAR ROW END */}
-          {/* PROGRESS-BAR ROW START*/}
-          <div className="row padding-progressbar">
-            {/* PROGRESS-BAR START */}
-            <div className="col-sm-4 col-md-1 ">
-              <p className="text-center">Informatica</p>
-            </div>
-            <div className="col-sm-8 col-md-5">
-              <div className="progress  progressbar-height">
-                <div
-                  className="progress-bar progress-bar-striped bg-success"
-                  role="progressbar"
-                  style={{ width: "75%" }}
-                  aria-valuenow="10"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  Experienced
-                </div>
-              </div>
-            </div>
-            {/* PROGRESS-BAR END */}
-            {/* PROGRESS-BAR START */}
-            <div className="col-xs-4 col-sm-4 col-md-1">
-              <p className="text-center">Logstash</p>
-            </div>
-            <div className="col-xs-8 col-sm-8 col-md-5">
-              <div className="progress  progressbar-height">
-                <div
-                  className="progress-bar progress-bar-striped bg-success"
-                  role="progressbar"
-                  style={{ width: "75%" }}
-                  aria-valuenow="10"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  Familiar
-                </div>
-              </div>
-            </div>
-            {/* PROGRESS-BAR END */}
-          </div>
-          {/* PROGRESS-BAR ROW END */}
-          {/* PROGRESS-BAR ROW START*/}
-          <div className="row padding-progressbar">
-            {/* PROGRESS-BAR START */}
-            <div className="col-sm-4 col-md-1 ">
-              <p className="text-center">Elastic Search</p>
-            </div>
-            <div className="col-sm-8 col-md-5">
-              <div className="progress  progressbar-height">
-                <div
-                  className="progress-bar progress-bar-striped bg-success"
-                  role="progressbar"
-                  style={{ width: "75%" }}
-                  aria-valuenow="10"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  Experienced
-                </div>
-              </div>
-            </div>
-            {/* PROGRESS-BAR END */}
-            {/* PROGRESS-BAR START */}
-            <div className="col-xs-4 col-sm-4 col-md-1">
-              <p className="text-center">Kibana</p>
-            </div>
-            <div className="col-xs-8 col-sm-8 col-md-5">
-              <div className="progress  progressbar-height">
-                <div
-                  className="progress-bar progress-bar-striped bg-success"
-                  role="progressbar"
-                  style={{ width: "75%" }}
-                  aria-valuenow="10"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  Familiar
-                </div>
-              </div>
-            </div>
-            {/* PROGRESS-BAR END */}
-          </div>
-          {/* PROGRESS-BAR ROW END */}
-          {/* PROGRESS-BAR ROW START*/}
-          <div className="row padding-progressbar">
-            {/* PROGRESS-BAR START */}
-            <div className="col-sm-4 col-md-1 ">
-              <p className="text-center">Apache Spark</p>
-            </div>
-            <div className="col-sm-8 col-md-5">
-              <div className="progress  progressbar-height">
-                <div
-                  className="progress-bar progress-bar-striped bg-primary"
-                  role="progressbar"
-                  style={{ width: "50%" }}
-                  aria-valuenow="10"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  Experienced
-                </div>
-              </div>
-            </div>
-            {/* PROGRESS-BAR END */}
-            {/* PROGRESS-BAR START */}
-            <div className="col-xs-4 col-sm-4 col-md-1">
-              <p className="text-center">Docker</p>
-            </div>
-            <div className="col-xs-8 col-sm-8 col-md-5">
-              <div className="progress  progressbar-height">
-                <div
-                  className="progress-bar progress-bar-striped bg-primary"
-                  role="progressbar"
-                  style={{ width: "50%" }}
-                  aria-valuenow="10"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  Familiar
-                </div>
-              </div>
-            </div>
-            {/* PROGRESS-BAR END */}
-          </div>
-          {/* PROGRESS-BAR ROW END */}
         </div>
       </div>
     );

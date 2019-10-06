@@ -5,6 +5,7 @@ import Navbar from "../navigation/navbar";
 import Profile from "../profile/profile";
 import Experiences from "../experience/experiences";
 import Skills from "../skills/skills";
+import Portfolio from "../portfolio/portfolio";
 
 class App extends Component {
   render() {
@@ -25,6 +26,9 @@ class App extends Component {
         </div>
         <div>
           <Skills />
+        </div>
+        <div>
+          <Portfolio />
         </div>
       </div>
     );

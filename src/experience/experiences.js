@@ -53,7 +53,7 @@ class Experiences extends Component {
     return (
       <div id="experience">
         <div className="container">
-          <div id="experience-headings" className="row delay-1s">
+          <div id="experience-headings" className="row">
             <Waypoint
               scrollableAncestor={window}
               onEnter={() => {
@@ -82,14 +82,14 @@ class Experiences extends Component {
           <div className="row text-sm-center text-lg-right experience-row mx-auto">
             <div
               id="bank-heading-animation"
-              className="col-md-4 experience-heading delay-1s"
+              className="col-md-4 experience-heading"
             >
               <h4>Yapı & Kredi Bank</h4>
               <p>Feb 2018 - Current</p>
             </div>
             <div
               id="bank-details-animation"
-              className="col-md-8 experiences-list delay-1s"
+              className="col-md-8 experiences-list"
             >
               <p className="col-12">
                 <a href="https://en.wikipedia.org/wiki/Yap%C4%B1_ve_Kredi_Bankas%C4%B1">
@@ -132,14 +132,14 @@ class Experiences extends Component {
           <div className="row text-sm-center text-lg-right experience-row mx-auto">
             <div
               id="aselsan-heading-animation"
-              className="col-md-4 experience-heading delay-1s"
+              className="col-md-4 experience-heading"
             >
               <h4>Aselsan</h4>
               <p>Dec 2016 - Jan 2018</p>
             </div>
             <div
               id="aselsan-details-animation"
-              className="col-md-8 experiences-list delay-1s"
+              className="col-md-8 experiences-list"
             >
               <p className="col-12">
                 <a href="https://www.aselsan.com.tr/en">Aselsan</a> &nbsp; is
@@ -187,14 +187,14 @@ class Experiences extends Component {
           <div className="row text-sm-center text-lg-right experience-row mx-auto">
             <div
               id="aselsan-intern-heading-animation"
-              className="col-md-4 experience-heading delay-1s"
+              className="col-md-4 experience-heading"
             >
               <h4>Aselsan - Intern</h4>
               <p>July 2015 - Sep 2015</p>
             </div>
             <div
               id="aselsan-intern-details-animation"
-              className="col-md-8 experiences-list delay-1s"
+              className="col-md-8 experiences-list"
             >
               <p className="col-12">
                 Aselsan is the biggest defense industry in Turkey and 52nd in
@@ -228,14 +228,14 @@ class Experiences extends Component {
           <div className="row text-sm-center text-lg-right experience-row mx-auto">
             <div
               id="tai-intern-heading-animation"
-              className="col-md-4 experience-heading delay-1s"
+              className="col-md-4 experience-heading"
             >
               <h4>Turkish Aerospace Industries - Intern</h4>
               <p>July 2014 - Sep 2014</p>
             </div>
             <div
               id="tai-intern-details-animation"
-              className="col-md-8 experiences-list delay-1s"
+              className="col-md-8 experiences-list"
             >
               <p className="col-12">
                 <a href="https://www.tusas.com.tr/en/corporate/about-us">

@@ -25,6 +25,7 @@
     color: #2fadfe;
     font-family: "Dosis";
     letter-spacing: .4rem;
+    text-shadow: .1rem .2rem .3rem #17567E;
 
 }
 
@@ -35,6 +36,7 @@
     font-family: "Dosis";
     font-weight: bold;
     letter-spacing: .4rem;
+    text-shadow: .1rem .2rem .3rem black;
 
 }
 
@@ -59,7 +61,7 @@
     font-family: "Dosis";
     font-weight: bold;
     color: greenyellow;
-    /* text-shadow: .1rem .2rem .3rem gray;*/
+    text-shadow: .1rem .2rem .3rem black;
 
 }
 
@@ -67,7 +69,9 @@
     font-family: "Roboto";
     letter-spacing: .1rem;
     font-size: 2.4vh;
-    color: white
+    color: white;
+    text-shadow: .1rem .2rem .3rem #17567E;
+
 }
 
 #profile {
@@ -76,4 +80,6 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
 }

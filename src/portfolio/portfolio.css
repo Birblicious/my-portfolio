@@ -1,5 +1,9 @@
 .card-img {
-    margin: 10vh auto 10vh auto;
+    margin: 5vh auto auto auto;
+}
+
+.card-image {
+    margin: auto auto auto auto;
 }
 
 #portfolio {
@@ -34,4 +38,28 @@
 
 .cloudIcon {
     color: gray;
+}
+
+.portfolio-details {
+    font-size: 3vh;
+    color: greenyellow;
+    font-family: "Dosis";
+    font-weight: bold;
+    letter-spacing: .4rem;
+    text-shadow: .1rem .2rem .3rem black;
+}
+
+.card-text {
+    font-size: 2vh;
+    font-weight: 600;
+    font-family: "Dosis";
+    color: #092232;
+
+}
+
+.card-title {
+    font-size: 3vh;
+    font-weight: bold;
+    font-family: "Dosis";
+    color: #092232;
 }

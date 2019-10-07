@@ -17,7 +17,7 @@ class Portfolio extends Component {
               className="col-12 my-5 text-center delayed-6"
             >
               <p className="profile-entry">Portfolio</p>
-              <p className="profile-details">
+              <p className="portfolio-details">
                 There is only one corner of the universe you can be certain of
                 improving, and that's your own self.
               </p>
@@ -26,7 +26,7 @@ class Portfolio extends Component {
           </div>
           <div className="card col-12 mx-auto" style={{ maxWidth: "60vh" }}>
             <div className="row no-gutters">
-              <div className="col-4 mx-auto">
+              <div className="col-4 card-image mx-auto">
                 <img
                   src={require("./resources/EasyNews.PNG")}
                   className="card-img mx-2"
@@ -66,7 +66,7 @@ class Portfolio extends Component {
           </div>
           <div className="card col-12 mx-auto" style={{ maxWidth: "60vh" }}>
             <div className="row no-gutters">
-              <div className="col-4 mx-auto">
+              <div className="col-4 card-image mx-auto">
                 <img
                   src={require("./resources/holidayapi.png")}
                   className="card-img mx-2"
@@ -104,7 +104,7 @@ class Portfolio extends Component {
           </div>
           <div className="card col-12 mx-auto" style={{ maxWidth: "60vh" }}>
             <div className="row no-gutters">
-              <div className="col-4 mx-auto">
+              <div className="col-4 card-image mx-auto">
                 <img
                   src={require("./resources/IRUCSV.png")}
                   className="card-img mx-2"

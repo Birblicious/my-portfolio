@@ -9,6 +9,7 @@
     color: #2fadfe;
     font-family: "Dosis";
     letter-spacing: .4rem;
+    text-shadow: .1rem .2rem .3rem #17567E;
 }
 
 .experience-details {
@@ -17,11 +18,13 @@
     font-family: "Dosis";
     font-weight: bold;
     letter-spacing: .4rem;
+    text-shadow: .1rem .2rem .3rem black;
 }
 
 .experience-row {
     text-align: center;
     color: #adff2f;
+    text-shadow: .1rem .2rem .3rem #17567E;
 }
 
 .experiences-list {
@@ -37,6 +40,7 @@
 
 a {
     color: greenyellow;
+
 }
 
 a:hover {

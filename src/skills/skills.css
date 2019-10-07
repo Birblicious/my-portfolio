@@ -27,6 +27,7 @@
     color: greenyellow;
     font-size: 2vh;
     margin: auto;
+    font-weight: bold;
 }
 
 .skills-entry {
@@ -61,4 +62,9 @@
     font-weight: bold;
     font-size: 3vh;
     text-shadow: .1rem .1rem 4rem cyan;
+}
+
+#skills {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
 }

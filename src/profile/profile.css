@@ -11,7 +11,7 @@
     width: 40vh;
     max-width: 40vh;
     min-width: 40vh;
-    background-image: url("./resources/profile8.jpg");
+    background-image: url("./resources/profile-profile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -71,7 +71,7 @@
 }
 
 #profile {
-    background-image: url("./resources/mark.jpg");
+    background-image: url("./resources/mick-dark.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

@@ -24,19 +24,19 @@ class Portfolio extends Component {
               <hr className="line-options"></hr>
             </div>
           </div>
-          <div class="card col-12 mx-auto" style={{ maxWidth: "60vh" }}>
-            <div class="row no-gutters">
-              <div class="col-4 mx-auto">
+          <div className="card col-12 mx-auto" style={{ maxWidth: "60vh" }}>
+            <div className="row no-gutters">
+              <div className="col-4 mx-auto">
                 <img
                   src={require("./resources/EasyNews.PNG")}
-                  class="card-img mx-2"
+                  className="card-img mx-2"
                   alt="..."
                 />
               </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Easy News</h5>
-                  <p class="card-text text-justify">
+              <div className="col-md-8">
+                <div className="card-body">
+                  <h5 className="card-title text-center">Easy News</h5>
+                  <p className="card-text text-justify">
                     Easy News is a news site built on The Guardian's API.
                     Initially started as a local host project to practice on
                     .Net Framework. In time I decided to take things a little
@@ -64,19 +64,21 @@ class Portfolio extends Component {
               </div>
             </div>
           </div>
-          <div class="card col-12 mx-auto" style={{ maxWidth: "60vh" }}>
-            <div class="row no-gutters">
-              <div class="col-4 mx-auto">
+          <div className="card col-12 mx-auto" style={{ maxWidth: "60vh" }}>
+            <div className="row no-gutters">
+              <div className="col-4 mx-auto">
                 <img
                   src={require("./resources/holidayapi.png")}
-                  class="card-img mx-2"
+                  className="card-img mx-2"
                   alt="..."
                 />
               </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title text-center">GreenFluxHolidayAPI</h5>
-                  <p class="card-text text-justify">
+              <div className="col-md-8">
+                <div className="card-body">
+                  <h5 className="card-title text-center">
+                    GreenFluxHolidayAPI
+                  </h5>
+                  <p className="card-text text-justify">
                     This is an API that wrapps the Nager.Date API. It has three
                     main features. 1. Which country had the most holidays this
                     year? 2. Which month had most holidays if you compare
@@ -100,19 +102,19 @@ class Portfolio extends Component {
               </div>
             </div>
           </div>
-          <div class="card col-12 mx-auto" style={{ maxWidth: "60vh" }}>
-            <div class="row no-gutters">
-              <div class="col-4 mx-auto">
+          <div className="card col-12 mx-auto" style={{ maxWidth: "60vh" }}>
+            <div className="row no-gutters">
+              <div className="col-4 mx-auto">
                 <img
                   src={require("./resources/IRUCSV.png")}
-                  class="card-img mx-2"
+                  className="card-img mx-2"
                   alt="..."
                 />
               </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title text-center">IRUWebAPI</h5>
-                  <p class="card-text text-justify">
+              <div className="col-md-8">
+                <div className="card-body">
+                  <h5 className="card-title text-center">IRUWebAPI</h5>
+                  <p className="card-text text-justify">
                     IRUWebAPI is essentially a very large CVS file to JSON
                     converter. It stream downloads the given CSV file url so
                     working on enormous files becomes possible. At the end of

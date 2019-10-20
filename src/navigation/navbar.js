@@ -55,11 +55,11 @@ class Navbar extends Component {
                       PORTFOLIO
                     </a>
                   </li>
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <a className="nav-link" href="#blog">
                       BLOG
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>

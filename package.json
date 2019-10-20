@@ -8,10 +8,14 @@
     "@fortawesome/free-regular-svg-icons": "^5.11.1",
     "@fortawesome/free-solid-svg-icons": "^5.11.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
+    "firebase": "^7.2.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-redux-firebase": "^3.0.2",
     "react-scripts": "3.1.1",
     "react-waypoint": "^9.0.2",
+    "redux": "^4.0.4",
+    "redux-firestore": "^0.9.0",
     "waypoints": "^4.0.1"
   },
   "scripts": {

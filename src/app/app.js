@@ -10,7 +10,7 @@ import Portfolio from "../portfolio/portfolio";
 class App extends Component {
   async componentDidMount() {
     const response = await fetch(
-      "http://emailsenderae.azurewebsites.net/api/EmailSenderFunction?name=arda"
+      "https://emailsenderae.azurewebsites.net/api/EmailSenderFunction?name=arda"
     );
     const myJson = await response.text();
     console.log(myJson);

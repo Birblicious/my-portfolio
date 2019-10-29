@@ -9,11 +9,13 @@ import Portfolio from "../portfolio/portfolio";
 
 class App extends Component {
   async componentDidMount() {
+    /*
     const response = await fetch(
       "https://emailsenderae.azurewebsites.net/api/EmailSenderFunction?name=arda"
     );
     const myJson = await response.text();
     console.log(myJson);
+    */
   }
   render() {
     return (

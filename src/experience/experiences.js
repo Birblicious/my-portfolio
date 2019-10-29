@@ -1,6 +1,15 @@
 import React, { Component } from "react";
 import "./experiences.css";
 import { Waypoint } from "react-waypoint";
+import { connect } from "react-redux";
+import { bindActionCreators, compose } from "redux";
+import { actionCreators } from "../store/experienceStore";
+import {
+  firebaseConnect,
+  firestoreConnect,
+  isLoaded,
+  isEmpty
+} from "react-redux-firebase";
 
 class Experiences extends Component {
   render() {
@@ -49,6 +58,8 @@ class Experiences extends Component {
       element.classList.add("animated");
       element.classList.add("zoomInDown");
     };
+
+    console.log(this); // Logged here
 
     return (
       <div id="experience">
@@ -263,4 +274,11 @@ class Experiences extends Component {
   }
 }
 
-export default Experiences;
+export default compose(
+  connect(
+    state => state,
+    dispatch => bindActionCreators(actionCreators, dispatch)
+  ),
+  firebaseConnect(),
+  firestoreConnect(["test"])
+)(Experiences);
